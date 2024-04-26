@@ -15,7 +15,6 @@ const HomeLayout = () => {
         <div id="layoutSidenav_content">
           <main>
             <h1>Главная страница</h1>
-            {/* <ProductForm /> */}
           </main>
           <Footer />
         </div>

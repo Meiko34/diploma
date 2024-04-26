@@ -47,7 +47,6 @@ function App() {
         <Route path="/test" element={<Test />} />
         <Route path="/cart" element={<Basket />} />
         <Route path="/contact" element={<Contact />} />
-        {/* <Route path="/users" element={<Users />} /> */}
         <Route path="/admin" element={<HomeLayout />} />
 
         <Route path="/admin/add" element={<MasterLayout />} />

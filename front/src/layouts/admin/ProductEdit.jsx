@@ -8,7 +8,7 @@ import Footer from "./Footer";
 const ProductEdit = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
-  // const { initialProduct } = useLocation().state;
+
   const location = useLocation();
   const initialProduct = location.state && location.state.initialProduct;
 
@@ -19,7 +19,6 @@ const ProductEdit = () => {
       }
 
       const fetchProduct = async () => {
-        // setProduct(initialProduct);
         try {
           const response = await fetch(
             `http://localhost:8000/api/products/${productId}`

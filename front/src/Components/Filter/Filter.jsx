@@ -14,9 +14,6 @@ function Example() {
       <Button variant="primary" className="but " onClick={handleShow}>
         ФИЛЬТР
       </Button>
-      {/* <ButtonCart variant="primary" onClick={handleShow}>
-        ФИЛЬТР
-      </ButtonCart> */}
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>

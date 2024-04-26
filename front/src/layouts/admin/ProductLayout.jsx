@@ -11,7 +11,7 @@ import React, { useState, useEffect } from "react";
 
 const ProductLayout = () => {
   const [products, setProducts] = useState([]);
-  // const [editingProduct, setEditingProduct] = useState(null);
+
   const navigate = useNavigate();
 
   const handleEditProduct = (productId) => {
@@ -99,7 +99,6 @@ const ProductLayout = () => {
                         <td>{product.price}</td>
                         <td>{product.description}</td>
 
-                        {/* <td>{user.created_at}</td> */}
                         <td>
                           <button
                             onClick={() => handleDeleteProduct(product.id)}

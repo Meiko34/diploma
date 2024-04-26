@@ -22,9 +22,9 @@ const Login = () => {
       }
 
       const responseData = await response.json();
-      // console.log(responseData);
+     
       console.log("Успешная авторизация! Токен:", responseData.token);
-      // Сохранить токен в localStorage или состоянии для дальнейшего использования
+      // Сохранить токен в localStorage
     } catch (error) {
       console.error("Ошибка при авторизации:", error.message);
     }

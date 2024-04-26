@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import ButtonCart from "../Button/ButtonCard";
+
 import "./Entrance.css";
 import Button from "react-bootstrap/Button";
 

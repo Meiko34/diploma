@@ -4,8 +4,6 @@ import Footer from "./Footer";
 import "../../assets/admin/css/styles.css";
 import "../../assets/admin/js/scripts.js";
 
-import routes from "../../routes/routes.js";
-import ProductForm from "../../Components/Admin/ProductForm.jsx";
 import PromotionPage from "../../Components/Admin/PromotionPage.jsx";
 
 const PromotionList = () => {

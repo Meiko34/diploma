@@ -3,13 +3,6 @@ import React, { useState, useEffect } from "react";
 function Contact() {
   const [contacts, setContacts] = useState({});
 
-  // useEffect(() => {
-
-  // fetch("http://127.0.0.1:8000/api/contacts")
-  //   .then((response) => response.json())
-  //   .then((data) => setContacts(data));
-  // }, []);
-
   useEffect(() => {
     const fetchData = async () => {
       try {

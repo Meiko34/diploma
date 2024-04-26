@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "./Authorization.css";
-// import Button from "react-bootstrap/Button";
+
 import { Link } from "react-router-dom";
-// import  { useHistory } from "react-router-dom";
+
 
 const Authorization = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-  // const [isAdminLoggedIn, setIsAdminLoggedIn] = useState(false);
-  // const history = useHistory();
+
+
 
   const handleLogin = async (e) => {
     e.preventDefault();

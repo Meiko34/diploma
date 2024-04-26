@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import "../../assets/admin/css/styles.css";
 import "../../assets/admin/js/scripts.js";
 
-import routes from "../../routes/routes.js";
 import PromotionForm from "../../Components/Admin/PromotionForm.jsx";
 
 const PromotionLayout = () => {

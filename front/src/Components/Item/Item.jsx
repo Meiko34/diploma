@@ -50,7 +50,7 @@ const Item = ({ addToCart, cart, item }) => {
                 }}
               >
                 <ButtonCart
-                  // onClick={handleAddToCart}
+           
                   onClick={() => handleAddToCart(item)}
                 >
                   {item.price}/гр

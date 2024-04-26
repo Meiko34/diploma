@@ -8,7 +8,6 @@ export default function Top() {
       <div>
         <div className="banner-top">
           <div className=" title container">"Top-10"</div>
-          {/* <div></div> */}
         </div>
 
         <div className="hotProduct">
