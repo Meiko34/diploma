@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> e104022a0dcb88514efc83aa957e38f40c1a414f
 import "./Banner.css";
 
 export default function Banner() {

@@ -3,14 +3,11 @@ import "./Authorization.css";
 
 import { Link } from "react-router-dom";
 
-
 const Authorization = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-
-
 
   const handleLogin = async (e) => {
     e.preventDefault();
