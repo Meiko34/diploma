@@ -1,0 +1,15 @@
+.catalogProduct {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.title-item {
+  text-align: center;
+  font-size: 25px;
+}
+
+.btn {
+  text-align: start;
+}

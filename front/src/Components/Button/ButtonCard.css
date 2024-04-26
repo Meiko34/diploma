@@ -1,0 +1,22 @@
+.but {
+  /* background: #147735; */
+  background: #124723;
+  color: white;
+  border: #124f26;
+
+  /* width: 200px; */
+  /* margin: 0 auto; */
+  height: 40px;
+  margin-left: 10px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.but:hover {
+  background: #0a2e15;
+  background: #124f26;
+}
+
+.but.active {
+  background: #10a241;
+}

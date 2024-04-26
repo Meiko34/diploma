@@ -1,0 +1,25 @@
+.basketButton {
+  background: hsla(0, 0%, 89%, 0.603);
+  background: #124723;
+  
+  border-radius: 0;
+  width: 70px;
+  height: 40px;
+  border: none;
+}
+.basketButton:visited {
+  background: #0a2e15;
+}
+
+.basketButton:hover {
+  background: #0a2e15;
+}
+
+.basket {
+  color: #124723;
+
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}

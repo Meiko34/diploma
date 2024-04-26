@@ -1,0 +1,33 @@
+.item-banner {
+  position: relative;
+}
+.content-text {
+  /* position: fixed; */
+  margin-top: 100px;
+}
+
+.banner-img {
+  /* width: 200px; */
+  height: 600px;
+  width: 600px;
+}
+.banner-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /*Устанавливаем направление колонки для текста друг под другом*/
+  /* width: 500px; */
+  /* height: 500px; */
+  /* margin: 10px; */
+}
+
+.text-center {
+  /* text-align: center; */
+  width: 400px;
+  /* height: 100px; */
+  margin-bottom: 20px;
+}
+
+.ban {
+  margin-bottom: 20px;
+}

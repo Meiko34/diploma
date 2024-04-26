@@ -1,0 +1,23 @@
+.hyg {
+  text-decoration: none;
+  color: black;
+}
+
+.hyg:hover {
+  color: #124723;
+}
+
+.heg {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.naav {
+  margin-bottom: 20px;
+}
+
+.icon {
+  color: #124723;
+  font-size: 30px;
+  margin-left: 20px;
+}

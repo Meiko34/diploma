@@ -1,0 +1,40 @@
+.item {
+  /* width: 30%; */
+  margin-bottom: 30px;
+  background: #fff;
+  padding-bottom: 10px;
+  border-radius: 0;
+  border: none;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-content {
+  width: 60%;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.imgCard {
+  width: 200px;
+  height: 200px;
+  /* min-width: 50px;s */
+}
+
+.titleCard {
+  /* color: #726b6b; */
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.category {
+  color: #726b6b;
+  font-size: 15px;
+}
+
+.price {
+  font-size: 23px;
+}

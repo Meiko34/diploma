@@ -1,0 +1,30 @@
+.card-kinds {
+  border: 0;
+  margin-bottom: 30px;
+  border: none;
+  /* width: 300px; */
+  margin: 10px;
+}
+.title-kinds {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.map-kinds {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.kinds-img {
+  height: 300px;
+}

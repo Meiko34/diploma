@@ -1,0 +1,7 @@
+.banner-top {
+  height: 200px;
+  background-image: url("/public/img/top.jpg");
+  /* width: 100%;
+  height: 100%; */
+  background-size: cover;
+}

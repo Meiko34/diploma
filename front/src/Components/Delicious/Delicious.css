@@ -1,0 +1,29 @@
+.hotProduct {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 35px;
+  margin-top: 10px;
+  color: aliceblue;
+  text-align: center;
+}
+
+img {
+  /* width: 1280px; */
+  /* background-size: 100%; */
+  width: 100%;
+  height: 100%;
+  /* height: 200px; */
+}
+
+.banner {
+  height: 200px;
+  background-image: url("/public/img/delicious.jpg");
+  /* width: 100%;
+  height: 100%; */
+  background-size: cover; /*картинка не повторялась и растнулась*/
+}
