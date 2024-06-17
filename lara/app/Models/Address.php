@@ -13,4 +13,7 @@ class Address extends Model
 {
     return $this->hasMany(Client_addresses::class);
 }
+
+
+
 }

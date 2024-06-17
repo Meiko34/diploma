@@ -61,7 +61,7 @@ body {
 }
 
 .password-input input {
-  padding-right: 30px; /* Расстояние, чтобы смайлик не перекрывал текст */
+  /* padding-right: 30px; Расстояние, чтобы смайлик не перекрывал текст */
 }
 
 .password-input span {

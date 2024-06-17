@@ -21,9 +21,6 @@ return new class extends Migration
             $table->string('img')->nullable();
             $table->string('variety')->nullable();
             $table->string('collections')->nullable();
-
-
-
             $table->integer('price')->nullable();
             $table->timestamps();
         });

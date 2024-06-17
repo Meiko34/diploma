@@ -14,7 +14,7 @@ import CardDelicious from "./Components/Delicious/CardDelicious";
 import Fruit from "./Components/Fruit/CardFruit";
 import Test from "./Components/Test";
 import Basket from "./Components/Basket/Basket";
-import ProductPage from "./Components/ProductPage";
+import ProductPage from "./Components/ProductPage/ProductPage";
 import Authorization from "./Components/Authorization/Authorization";
 import MasterLayout from "./layouts/admin/MasterLayout";
 import Dashboard from "./Components/Admin/Dashboard";
@@ -28,6 +28,7 @@ import ArticleList from "./layouts/admin/ArticleList";
 import ArticleLayout from "./layouts/admin/ArticleLayout";
 import Contact from "./Components/Contact/Contact";
 import HomeLayout from "./layouts/admin/HomeLayout";
+// import ComponentWithHeaderAndFooter from "./Components/ComponentWithHeaderAndFooter";
 
 function App() {
   return (
@@ -35,6 +36,11 @@ function App() {
       <Header />
 
       <Routes>
+        {/* <Route exact path="/" element={<Home />}>
+          <Route index element={<ComponentWithHeaderAndFooter />} />
+          <Route path="/catalog" element={<Catalog />} />
+        </Route> */}
+
         <Route exact path="/" element={<Home />} />
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/stock" element={<Stock />} />
@@ -44,7 +50,7 @@ function App() {
         <Route path="/soothing" element={<Soothing />} />
         <Route path="/delicious" element={<CardDelicious />} />
         <Route path="/fruit" element={<Fruit />} />
-        <Route path="/test" element={<Test />} />
+        {/* <Route path="/test" element={<Form />} /> */}
         <Route path="/cart" element={<Basket />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<HomeLayout />} />

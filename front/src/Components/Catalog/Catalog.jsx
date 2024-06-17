@@ -12,16 +12,18 @@ const Catalog = () => {
   };
 
   return (
-    <div className="container">
-      <div className="btn">
-        <Filter />
-      </div>
-      <div className="title-item">Каталог</div>
+    <main>
+      <div className="container">
+        <div className="btn">
+          <Filter />
+        </div>
+        <div className="title-item">Каталог</div>
 
-      <div className="catalogProduct">
-        <Item addToCart={addToCart} />
+        <div className="catalogProduct d-flex flex-wrap justify-content-between">
+          <Item addToCart={addToCart} />
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 

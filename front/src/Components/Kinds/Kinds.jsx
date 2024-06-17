@@ -8,7 +8,7 @@ export default function Kinds() {
       <div className="title-item">Виды чая</div>
 
       <div className="card-container">
-        <Card className="card-kinds" style={{ width: "300px" }}>
+        <Card className=" col-md-2 card-kinds" style={{ width: "300px" }}>
           <Link className="hyg" to="/delicious">
             <Card.Img className="kinds-img" src="./img/w-t.jpg"></Card.Img>
             <Card.Title className="title-kinds">Белый чай</Card.Title>

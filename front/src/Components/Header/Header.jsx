@@ -3,10 +3,20 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import { VscAccount } from "react-icons/vsc";
+// import { VscAccount } from "react-icons/vsc";
 import { IoCartOutline } from "react-icons/io5";
+import { useState } from "react";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import { FaUserCircle } from "react-icons/fa";
 
-export default function ColorSchemesExample() {
+// ColorSchemesExample;
+
+// export default function Header() {
+export default function Header() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Navbar className="naav" bg="light" data-bs-theme="light">
@@ -44,15 +54,26 @@ export default function ColorSchemesExample() {
             </Nav.Link>
           </Nav>
 
-          <Link to="/cart">
+          <Link onClick={handleShow}>
+            {/* to="/cart" */}
             <div className="icon">
               <IoCartOutline />
             </div>
           </Link>
 
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title>Корзина</Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              Some text as placeholder. In real life you can have the elements
+              you have chosen. Like, text, images, lists, etc.
+            </Offcanvas.Body>
+          </Offcanvas>
           <Link to="/entrance">
             <div className="icon">
-              <VscAccount />
+              {/* <VscAccount /> */}
+              <FaUserCircle />
             </div>
           </Link>
         </Container>

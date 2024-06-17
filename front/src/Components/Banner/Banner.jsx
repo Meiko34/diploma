@@ -2,7 +2,7 @@ import "./Banner.css";
 
 export default function Banner() {
   return (
-    <div className=" container ban" style={{ display: "flex" }}>
+    <div className=" container-sm ban" style={{ display: "flex" }}>
       <div className="banner-img">
         <img alt="" src="./img/banner.jpg" style={{ flex: " 1" }}></img>
       </div>

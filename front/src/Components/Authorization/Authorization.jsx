@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Authorization.css";
+import Form from "react-bootstrap/Form";
 
 import { Link } from "react-router-dom";
 
@@ -45,30 +46,28 @@ const Authorization = () => {
     }
   };
 
-  const handleTogglePasswordVisibility = () => {
+  const PasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   return (
-    <form className="registration">
+    <Form className="registration">
       {error && <p style={{ color: "red" }}>{error}</p>}
       <h3>Авторизация</h3>
-      <input
+      <Form.Control
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Введите Email"
       />
-      <div className="password-input">
-        <input
+      <div className="w-100 password-input">
+        <Form.Control
           type={showPassword ? "text" : "password"}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Введите пароль"
         />
-        <span onClick={handleTogglePasswordVisibility}>
-          {showPassword ? "🙈" : "👁️"}
-        </span>
+        <span onClick={PasswordVisibility}>{showPassword ? "🙈" : "👁️"}</span>
       </div>
       <div>
         <button type="button" className="but" onClick={handleLogin}>
@@ -78,7 +77,7 @@ const Authorization = () => {
           Регистрация
         </Link>
       </div>
-    </form>
+    </Form>
   );
 };
 

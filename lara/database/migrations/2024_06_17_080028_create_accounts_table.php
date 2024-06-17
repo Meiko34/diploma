@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('varieties', function (Blueprint $table) {
+        Schema::create('accounts', function (Blueprint $table) {
+            
             $table->id();
-            $table->string('name');
+        // $table->unsignedBigInteger('user_id');
+        $table->string('account_number')->unique();
+$table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('varieties');
+        Schema::dropIfExists('accounts');
     }
 };

@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('baskets', function (Blueprint $table) {
             $table->id();
-          
-$table->foreignId('order_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-$table->foreignId('product_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+          $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
+$table->foreignId('order_id')->constrained('orders')->cascadeOnDelete()->cascadeOnUpdate();
+$table->foreignId('product_id')->constrained('products')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

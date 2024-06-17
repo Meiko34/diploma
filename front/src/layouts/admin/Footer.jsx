@@ -11,7 +11,7 @@ const Footer = () => {
               &middot;
               <Link to="#">Terms &amp; Conditions</Link>
             </div>
-          </div>
+          </div>``
         </div>
       </footer>
     );

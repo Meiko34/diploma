@@ -81,7 +81,7 @@ const UserLayout = () => {
                         <td>{user.created_at}</td>
                         <td>
                           <button onClick={() => handleDeleteUser(user.id)}>
-                            Удалить
+                            Деактивировать
                           </button>
                         </td>
                       </tr>

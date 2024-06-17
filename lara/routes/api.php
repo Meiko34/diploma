@@ -7,10 +7,11 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\PromotionController;
 use App\Http\Controllers\Api\ArticleController;
 use App\Http\Controllers\Api\ContactController;
-
-
-
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BasketController;
+use App\Http\Controllers\HomeController;
+
+
 
 
 
@@ -64,3 +65,15 @@ Route::delete('/articles/{articleId}', [ArticleController::class, 'destroy']);
 
 
 Route::get('/contacts', [ContactController::class, 'index']); 
+
+
+Route::post('/cart/add', [BasketController::class, 'addToCart']);
+Route::get('/cart', [BasketController::class, 'showCart']);
+
+
+// Route::get('/show-session-data', [HomeController::class, 'showSessionData']);
+// Route::get('/show-session-data', 'App\Http\Controllers\HomeController@showSessionData');
+// Route::get('/show-session-data', function() {
+//     $sessionData = session()->all();
+//     dd($sessionData);
+// });

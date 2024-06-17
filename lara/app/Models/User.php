@@ -2,22 +2,28 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
+// use Illuminate\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Auth\Notifications\VerifyEmail;
 
-class User extends Authenticatable
+// use Illuminate\Contracts\Auth\MustVerifyEmail as MustVerifyEmailContract;
+// use Illuminate\Auth\MustVerifyEmail as MustVerifyEmailTrait;
+
+
+
+// use Illuminate\Database\Eloquent\Model;
+
+
+class User extends Authenticatable 
+// implements MustVerifyEmail
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable, MustVerifyEmail;
   
-
-
      protected $table = "users";
-
-    
 
     /**
      * The attributes that are mass assignable.
@@ -39,6 +45,14 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+
+public function sendEmailVerificationNotification()
+{
+    $this->notify(new VerifyEmail);
+}
+
+
 public function orders()
     {
         return $this->hasMany(Order::class);
@@ -46,13 +60,9 @@ public function orders()
 
     public function client_address()
     {
-        return $this->hasMany(Address::class);
+        return $this->hasMany(Client_address::class);
     }
 
-public function role()
-    {
-        return $this->belongsTo(Role::class);
-    }
     /**
      * The attributes that should be cast.
      *

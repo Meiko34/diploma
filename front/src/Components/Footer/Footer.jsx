@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="container">
       <div className="footer-content">
         <div>
-          <h3>Чай</h3>
+          <h3>ВИДЫ</h3>
           <div>
             <ul>
               <li>
@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3>О компании</h3>
+          <h3>О КОМПАНИИ</h3>
           <ul>
             <li>
               <Link className="hyg" to="/aboutUs">
@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3>Клиентам</h3>
+          <h3>КЛИЕНТАМ</h3>
           <ul>
             <li>
               <Link className="hyg" to="/delivery">
@@ -57,25 +57,6 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-
-        {/* <ul>
-          <li>
-            <Link className="hyg" to="/">
-              Главная
-            </Link>
-          </li>
-
-          <li>
-            <Link className="hyg" to="/catalog">
-              Каталог
-            </Link>
-          </li>
-          <li>
-            <Link className="hyg" to="/aboutUs">
-              О нас
-            </Link>
-          </li>
-        </ul> */}
       </div>
     </footer>
   );

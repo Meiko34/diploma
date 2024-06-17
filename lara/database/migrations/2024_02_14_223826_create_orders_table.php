@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             // $table->unsignedBigInteger('client_id');
-            $table->foreignId('client_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('quantity'); 
             $table->integer('confirmation');
-            $table->foreignId('delivery_id')->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignId('delivery_id')->constrained('deliveries')->cascadeOnDelete()->cascadeOnUpdate();
 
             $table->timestamps();
         });

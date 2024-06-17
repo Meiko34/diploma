@@ -12,8 +12,10 @@ class Product extends Model
 
 protected $fillable = ['name', 'country', 'description', 'cooking_method', 'img', 'price', 'variety', 'collections'];
 
-    public function variety()
+    public function basket()
 {
-    return $this->belongsTo(Variety::class);
+    return $this->hasMany(Basket::class);
 }
+ 
+  
 }

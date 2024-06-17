@@ -6,7 +6,7 @@ import "./Delicious.css";
 export default function Hot() {
   return (
     <>
-      <div>
+      <div className="">
         <div className="banner">
           <div className=" title container">
             "Когда захотелось что-то вкусненькое"

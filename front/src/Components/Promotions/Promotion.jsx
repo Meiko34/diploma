@@ -25,7 +25,7 @@ export default function Stock() {
   return (
     <div className="catalogProduct container">
       {promotions.map((promo) => (
-        <Card key={promo.id} className="item-promos">
+        <Card key={promo.id} className="col-lg-3 col-sm-6 item-promos">
           <Card.Body className="prom-content">
             <Card.Title className="title-prom">{promo.name}</Card.Title>
             <Card.Text className="desc-prom">

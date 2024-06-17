@@ -14,7 +14,6 @@ export default function Home() {
       <Banner />
 
       <Kinds />
-
       <div className="selection container ">
         <div className="title-item">Коллекции</div>
         <Delicious />

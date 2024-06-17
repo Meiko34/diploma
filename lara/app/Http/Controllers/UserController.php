@@ -3,12 +3,13 @@
 
 // namespace App\Http\Controllers;
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Support\Carbon;
 use App\Http\Resources\UserResource;
-
+use Illuminate\Support\Facades\Mail;
 
 
 
@@ -26,19 +27,12 @@ class UserController extends Controller
     $response = []; 
 
            foreach ($users as $user) { 
-
              $response[] = [ 
-
                 'id' => $user->id, 
-
                 'name' => $user->name, 
-
                 'email' => $user->email, 
                 'created_at' => $user->created_at,
-
-
             ]; 
-          
         }
           return response()->json($response, 200, [], JSON_UNESCAPED_UNICODE);
     }
@@ -60,9 +54,16 @@ class UserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => $request->password,
+            'email_verified_at' => null //Нулл по умолчанию
         ]);
 
-        return response()->json(['message' => 'User registered successfully', 'user' => $user]);
+  $token = Str::random(60);
+    $user->update(['email_verification_token' => $token]);
+    Mail::to($user->email)->send(new RegistrationConfirmation($user, $token));
+
+// $user->sendEmailVerificationNotification(); письмо на почту
+
+       return response()->json(['message' => 'Регистрация прошла успешно. Подтверждение на электронной почте.', 'user' => $user]);
     }
 
     /**
@@ -74,10 +75,28 @@ class UserController extends Controller
     }
 
     
+public function verifyEmail(Request $request)
+{
+    $user = User::where('email_verification_token', $request->token)->first();
 
-
+    if ($user) {
+        $user->update(['email_verified_at' => now(), 'email_verification_token' => null]);
+        // Дополнительная логика после подтверждения почты
+    }
     
+}
 
+
+public function resendVerificationEmail(Request $request)
+{
+    $user = $request->user();
+
+    if (!$user->hasVerifiedEmail()) {
+        $user->sendEmailVerificationNotification();
+        
+        // Логика после повторной отправки письма
+    }
+}
     /**
      * Show the form for editing the specified resource.
      */

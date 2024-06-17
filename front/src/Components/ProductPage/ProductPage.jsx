@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import "./ProductPage.css";
+import Button from "react-bootstrap/esm/Button";
 
 const ProductPage = () => {
   const [product, setProduct] = useState(null);
@@ -43,11 +45,23 @@ const ProductPage = () => {
   }
 
   return (
-    <div>
-      <h2>{product.name}</h2>
-      <p>{product.description}</p>
-      <p>Цена: {product.price}</p>
-      {/* Добавьте другие детали товара по вашему усмотрению */}
+    <div className="container">
+      <div className="product-item">
+        <div className="box">
+          <img className="product-img" src={product.img}></img>
+        </div>
+        <div className="box">
+          <div className="product-desc">
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
+            <p>Цена: {product.price}</p>
+            <div>
+              <Button className="but">В корзину</Button>
+              <Button className="but">В избранное</Button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

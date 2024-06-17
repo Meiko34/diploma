@@ -55,7 +55,7 @@ const PromotionPage = () => {
         >
           <div>
             <i className="fas fa-table me-1"></i>
-            Список товаров
+            Список акций
           </div>
           <Link to="/admin/promotionLayout">
             <button>+</button>

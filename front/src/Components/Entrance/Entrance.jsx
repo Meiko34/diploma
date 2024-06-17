@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import Form from "react-bootstrap/Form";
 import "./Entrance.css";
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 
 const RegisterForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -40,50 +40,69 @@ const RegisterForm = () => {
     }
   };
 
-  const handleTogglePasswordVisibility = () => {
+  const PasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="registration">
-      <h3>Регистрация</h3>
-      <input
-        className=""
-        type="text"
-        name="name"
-        placeholder="Введите имя"
-        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-        autoComplete="name"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Введите email"
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-        autoComplete="email"
-      />
-      <div className="password-input">
-        <input
-          type={showPassword ? "text" : "password"}
-          value={formData.password}
-          onChange={(e) =>
-            setFormData({ ...formData, password: e.target.value })
-          }
-          placeholder="Придумайте пароль"
-        />
-        <span onClick={handleTogglePasswordVisibility}>
-          {showPassword ? "🙈" : "👁️"}
-        </span>
+    <div className="container col-xl-10 col-xxl-8 px-4 py-5">
+      <div className="row align-items-center g-lg-5 py-5">
+        <div className="col-lg-7 text-center text-lg-start">
+          <h1 className="display-4 fw-bold lh-1 text-body-emphasis mb-3">
+            Добро пожаловать в наш интернет-магазин «Чайный сад»!
+          </h1>
+          <p className="col-lg-10 fs-4">
+            Здесь каждая чашка напитка становится уникальным путешествием в мир
+            ароматов и вкусов.
+          </p>
+        </div>
+        <div className="col-md-10 mx-auto col-lg-5">
+          <Form onSubmit={handleSubmit} className="registration">
+            <h3>Регистрация</h3>
+            <Form.Control
+              className=""
+              type="text"
+              name="name"
+              placeholder="Введите имя"
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              autoComplete="name"
+            />
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Введите email"
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+              autoComplete="email"
+            />
+            <div className="password-input w-100">
+              <Form.Control
+                type={showPassword ? "text" : "password"}
+                value={formData.password}
+                onChange={(e) =>
+                  setFormData({ ...formData, password: e.target.value })
+                }
+                placeholder="Придумайте пароль"
+              />
+              <span onClick={PasswordVisibility}>
+                {showPassword ? "🙈" : "👁️"}
+              </span>
+            </div>
+            <div>
+              <button type="submit" className="but">
+                Сохранить
+              </button>
+              <Link to="/authorization" className="hyg">
+                Авторизация
+              </Link>
+            </div>
+          </Form>
+        </div>
       </div>
-      <div>
-        <Button type="submit" className="but">
-          Сохранить
-        </Button>
-        <Link to="/authorization" className="hyg">
-          Авторизация
-        </Link>
-      </div>
-    </form>
+    </div>
   );
 };
 

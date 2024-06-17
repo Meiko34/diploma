@@ -1,0 +1,17 @@
+.product-item {
+  width: 100%;
+}
+.box {
+  display: inline-block;
+  width: 50%;
+}
+.product-desc {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+
+  flex-direction: column;
+}
+.product-img {
+  width: 90%;
+}
